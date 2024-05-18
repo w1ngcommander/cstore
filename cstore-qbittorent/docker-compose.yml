@@ -1,6 +1,5 @@
 version: "3.7"
 
-name: qbittorent
 services:
     app_proxy:
       environment:
