@@ -1,14 +1,9 @@
 version: "3.7"
 
 services:
-    app_proxy:
-      environment:
-        # The format here is: <app-id>_<docker-service-name>_1
-        APP_HOST: cstore-qbittorent_pia_1
-        APP_PORT: 8199
-    qbittorrent:
+    server:
       init: true
-      container_name: pia
+      container_name: pia-qbittorrent
       restart: unless-stopped
       cap_add:
           - NET_ADMIN
