@@ -1,0 +1,30 @@
+version: "1.0"
+
+name: qbittorent
+services:
+    app_proxy:
+      environment:
+        # The format here is: <app-id>_<docker-service-name>_1
+        APP_HOST: cstore-qbittorent_1
+        APP_PORT: 8888
+    pia-qbittorrent:
+      init: true
+      container_name: pia
+      restart: unless-stopped
+      cap_add:
+          - NET_ADMIN
+      volumes:
+          - /mnt/500gb/DL/:/downloads
+          - /mnt/500gb/qBitConf/:/config
+          - /mnt/4tb/:/4tb
+      ports:
+          - 8888:8888
+      environment:
+          - REGION=South Africa
+          - USER=USER
+          - PASSWORD=PASSWORD
+          - UID=3
+          - GID=3
+          - TZ=Africa/Johannesburg
+          - PORT_FORWARDING=true
+      image: j4ym0/pia-qbittorrent
