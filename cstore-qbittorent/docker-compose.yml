@@ -20,7 +20,7 @@ services:
       ports:
           - 8888:8888
       environment:
-          - REGION=South Africa
+          - REGION=south_africa
           - USER=USER
           - PASSWORD=PASSWORD
           - UID=3
