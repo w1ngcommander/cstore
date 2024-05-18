@@ -4,7 +4,7 @@ name: qBittorent
 tagline: Torrent Management, Protected by VPN
 icon: https://upload.wikimedia.org/wikipedia/commons/6/66/New_qBittorrent_Logo.svg
 category: Utilities
-version: "1.0.0"
+version: "1.0.1"
 port: 8199
 description: >-
   Torrent Management, Protected by VPN
