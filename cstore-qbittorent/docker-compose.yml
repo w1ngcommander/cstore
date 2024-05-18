@@ -4,11 +4,11 @@ services:
     app_proxy:
       environment:
         # The format here is: <app-id>_<docker-service-name>_1
-        APP_HOST: cstore-qbittorent_1
+        APP_HOST: cstore-qbittorent_pia_1
         APP_PORT: 8199
     qbittorrent:
       init: true
-      container_name: qbittorrent
+      container_name: pia
       restart: unless-stopped
       cap_add:
           - NET_ADMIN
@@ -25,5 +25,4 @@ services:
           - UID=3
           - GID=3
           - TZ=Africa/Johannesburg
-          - PORT_FORWARDING=true
       image: j4ym0/pia-qbittorrent
